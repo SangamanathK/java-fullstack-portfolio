@@ -61,10 +61,10 @@ https://sangamanathk.github.io/java-fullstack-portfolio/
 - 👨 About Me
 - 💻 Skills
 - 🚀 Projects
-- 💼 Experience
+- 💼 Journey
 - 📄 Resume
 - 📞 Contact
-- 🔗 Social Links
+
 
 ---
 
