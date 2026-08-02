@@ -150,6 +150,8 @@ A responsive weather application that displays real-time weather information usi
 
 # 📷 Portfolio Preview
 
+-- HOME --
+<img width="1897" height="907" alt="Home" src="https://github.com/user-attachments/assets/a7ff93ea-ccd5-41e5-a4eb-28e11a88df19" />
 
 
 # 📄 Resume
