@@ -1,99 +1,146 @@
-# 🌐 Personal Portfolio
+# 🌐 Personal Portfolio Website
 
-Welcome to my **Personal Portfolio Website**! 🚀
+A modern, responsive, and interactive **Portfolio Website** built to showcase my skills, projects, experience, and achievements as a **Java Full Stack Developer**.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-
-![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
-
-![Portfolio](https://img.shields.io/badge/Portfolio-Live-blueviolet?style=for-the-badge)
-
-This portfolio showcases my skills, projects, technical expertise, and journey as a **Java Full Stack Developer**. It is designed to provide recruiters and visitors with a quick overview of my profile, projects, resume, and contact details.
+This portfolio serves as my personal developer website where recruiters and visitors can explore my projects, technical skills, resume, and contact information.
 
 ---
 
 ## 🚀 Live Demo
 
 🔗 **Portfolio Website:**  
-[**https://YOUR_PORTFOLIO_LINK**](https://sangamanathk.github.io/java-fullstack-portfolio/)
-
-> Click the link above to explore my portfolio online.
+https://sangamanathk.github.io/java-fullstack-portfolio/
 
 ---
 
-## 📌 About the Project
+## 📂 GitHub Repository
 
-This portfolio was built to create a professional online presence and highlight my technical skills and projects. It features a modern, responsive design with smooth navigation and easy access to my GitHub, LinkedIn, resume, and contact information.
+🔗 https://github.com/SangamanathK/java-fullstack-portfolio.git
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-- 🏠 Home Section
-- 👨‍💻 About Me
-- 🛠 Technical Skills
-- 💼 Projects Showcase
-- 📄 Resume Download
-- 🔗 GitHub Profile
-- 💼 LinkedIn Profile
+- 🌙 Modern Dark Theme UI
+- 🎨 Premium Glassmorphism Design
+- ⚡ Smooth Animations
 - 📱 Fully Responsive Design
-- ⚡ Smooth Scrolling Navigation
-- 📧 Contact Section
-- 🎨 Modern UI/UX
+- 💻 Professional Developer Layout
+- 🧑 About Me Section
+- 🛠 Skills Showcase
+- 📁 Project Gallery
+- 💼 Experience Section
+- 📄 Resume Download
+- 📞 Contact Section
+- 🔗 Social Media Integration
+- 🚀 Fast Performance
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Tech Stack
+
+### Frontend
 
 - HTML5
 - CSS3
-- JavaScript
-- Git
-- GitHub
+- JavaScript (ES6)
+
+### Design
+
+- Glassmorphism UI
+- CSS Animations
+- Responsive Web Design
+- Flexbox
+- CSS Grid
 
 ---
 
-## 📂 Project Structure
+# 📌 Portfolio Sections
 
-```text
-Portfolio/
-│── index.html
-│── style.css
-│── script.js
-│── assets/
-│   ├── images/
-│   ├── icons/
-│   └── resume/
-│── README.md
-```
+- 🏠 Home
+- 👨 About Me
+- 💻 Skills
+- 🚀 Projects
+- 💼 Experience
+- 📄 Resume
+- 📞 Contact
+- 🔗 Social Links
 
 ---
 
-## 💼 Featured Projects
+# 🚀 Featured Projects
 
-### 🏨 Hotel Management System
+## 📄 Question Paper Generator
+
+A Java Full Stack web application that automatically generates question papers with PDF export functionality.
+
+**Tech Stack**
+
 - Java
-- JSP & Servlets
+- JSP
+- Servlets
 - JDBC
 - Oracle Database
-- Apache Tomcat
+- iText PDF
 
-### 🚆 Train Ticket Reservation System
+---
+
+## 🏨 Hotel Management System
+
+A complete hotel management application with Admin and Customer modules.
+
+**Features**
+
+- Room Management
+- Customer Management
+- Booking System
+- Payment Module
+- Profile Management
+
+**Tech Stack**
+
 - Java
-- JSP & Servlets
+- JSP
+- Servlets
 - JDBC
 - Oracle Database
 
-### 📝 Automated Question Paper Generator
+---
+
+## 🚆 Train Ticket Reservation System
+
+A Java-based web application for online train ticket booking and reservation.
+
+**Features**
+
+- User Authentication
+- Ticket Booking
+- Reservation Management
+- Database Integration
+
+**Tech Stack**
+
 - Java
+- JSP
+- Servlets
 - JDBC
 - Oracle Database
 
-### 🌦 Weather Application
+---
+
+## 🌦 Weather App
+
+A responsive weather application that displays real-time weather information using Weather API.
+
+**Features**
+
+- Live Weather
+- Search History
+- Dark Mode
+- Responsive UI
+
+**Tech Stack**
+
 - HTML
 - CSS
 - JavaScript
@@ -101,97 +148,46 @@ Portfolio/
 
 ---
 
-## 📸 Screenshots
+# 📷 Portfolio Preview
 
-### 🏠 Home Page
 
-> Add a screenshot here.
 
-### 💼 Projects Section
+# 📄 Resume
 
-> Add a screenshot here.
-
-### 🛠 Skills Section
-
-> Add a screenshot here.
-
-### 📞 Contact Section
-
-> Add a screenshot here.
+You can download my latest resume directly from the portfolio.
 
 ---
 
-## ⚙️ Installation
+# 📬 Contact
 
-Clone the repository:
+**Name:** Sangamanath Kambar
 
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-```
+📧 Email:
+sangukambar0@gmail.com
 
-Open the project folder:
+💼 LinkedIn:
+https://www.linkedin.com/in/sangamanath-kambar01/
 
-```bash
-cd YOUR_REPOSITORY_NAME
-```
+💻 GitHub:
+https://github.com/SangamanathK
 
-Run the project by opening:
-
-```text
-index.html
-```
-
-in your preferred web browser.
+🌐 Portfolio:
+https://sangamanathk.github.io/java-fullstack-portfolio/
 
 ---
 
-## 🌐 Deployment
+# ⭐ If you like this project
 
-This portfolio is deployed online.
+Please consider giving it a ⭐ on GitHub.
 
-**Live Website:**  
-https://YOUR_PORTFOLIO_LINK
-
----
-
-## 📄 Resume
-
-You can download my latest resume directly from the portfolio website.
+It motivates me to build more amazing projects.
 
 ---
 
-## 📬 Contact
+# 👨‍💻 Developed By
 
 **Sangamanath Kambar**
- 
-💼 LinkedIn: https://www.linkedin.com/in/sangamanath-kambar01/
 
-💻 GitHub: https://github.com/YOUR_GITHUB_USERNAME
+Java Full Stack Developer
 
-🌐 Portfolio: https://sangamanathk.github.io/java-fullstack-portfolio/
-
----
-
-## 🤝 Connect With Me
-
-If you like this project:
-
-⭐ Star this repository
-
-🍴 Fork this repository
-
-💼 Connect with me on LinkedIn
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
-## ⭐ Support
-
-If you found this project helpful, please consider giving it a ⭐ on GitHub.
-
-Thank you for visiting my portfolio! 🚀
+> Passionate about building scalable, responsive, and user-friendly web applications using Java and modern web technologies.
