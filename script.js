@@ -5,65 +5,72 @@ const navLinkItems = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("main section[id]");
 const scrollProgress = document.querySelector(".scroll-progress");
 
-// Add a border to the navigation bar after scrolling.
-window.addEventListener("scroll", () => {
+const updateHeader = () => {
   header.classList.toggle("scrolled", window.scrollY > 30);
-});
+};
 
-// Open and close the mobile navigation menu.
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
+
 menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("open");
+  const isOpen = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
 
   const menuIcon = menuToggle.querySelector("i");
+  menuIcon.classList.toggle("fa-bars", !isOpen);
+  menuIcon.classList.toggle("fa-xmark", isOpen);
+});
 
-  if (navLinks.classList.contains("open")) {
-    menuIcon.classList.remove("fa-bars");
-    menuIcon.classList.add("fa-xmark");
-  } else {
-    menuIcon.classList.remove("fa-xmark");
-    menuIcon.classList.add("fa-bars");
+const closeMenu = () => {
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+
+  const menuIcon = menuToggle.querySelector("i");
+  menuIcon.classList.remove("fa-xmark");
+  menuIcon.classList.add("fa-bars");
+};
+
+navLinkItems.forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    navLinks.classList.contains("open") &&
+    !navLinks.contains(event.target) &&
+    !menuToggle.contains(event.target)
+  ) {
+    closeMenu();
   }
 });
 
-// Close the mobile menu after selecting a navigation link.
-navLinkItems.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.classList.remove("open");
-
-    const menuIcon = menuToggle.querySelector("i");
-    menuIcon.classList.remove("fa-xmark");
-    menuIcon.classList.add("fa-bars");
-  });
-});
-
-// Highlight the current navigation item while scrolling.
-window.addEventListener("scroll", () => {
+const updateActiveNav = () => {
   let currentSection = "";
 
   sections.forEach((section) => {
     const sectionTop = section.offsetTop - 150;
-    const sectionHeight = section.offsetHeight;
+    const sectionBottom = sectionTop + section.offsetHeight;
 
-    if (
-      window.scrollY >= sectionTop &&
-      window.scrollY < sectionTop + sectionHeight
-    ) {
-      currentSection = section.getAttribute("id");
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+      currentSection = section.id;
     }
   });
 
   navLinkItems.forEach((link) => {
-    link.classList.remove("active");
-
-    if (link.getAttribute("href") === `#${currentSection}`) {
-      link.classList.add("active");
-    }
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === `#${currentSection}`
+    );
   });
-});
+};
 
-// Add a gentle reveal animation as sections enter the screen.
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+updateActiveNav();
+
 const revealElements = document.querySelectorAll(
-  ".section-title, .about-card, .about-content, .skill-card, .project-card, .timeline-item, .resume-card, .contact-text, .contact-email"
+  ".section-title, .about-card, .about-content, .skill-card, " +
+  ".project-card, .timeline-item, .education-card, .cert-card, " +
+  ".resume-card, .contact-text, .contact-email"
 );
 
 revealElements.forEach((element) => {
@@ -82,20 +89,30 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  {
-    threshold: 0.12,
-  }
+  { threshold: 0.12 }
 );
 
-revealElements.forEach((element) => {
-  revealObserver.observe(element);
-});
+revealElements.forEach((element) => revealObserver.observe(element));
 
-window.addEventListener("scroll", () => {
+const updateScrollProgress = () => {
   const scrollableHeight =
     document.documentElement.scrollHeight - window.innerHeight;
 
-  const scrollPercentage = window.scrollY / scrollableHeight;
+  const scrollPercentage =
+    scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
 
   scrollProgress.style.transform = `scaleX(${scrollPercentage})`;
-});
+};
+
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+updateScrollProgress();
+
+if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  document.documentElement.style.scrollBehavior = "auto";
+
+  revealElements.forEach((element) => {
+    element.style.opacity = "1";
+    element.style.transform = "none";
+    element.style.transition = "none";
+  });
+}
