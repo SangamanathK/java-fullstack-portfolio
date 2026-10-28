@@ -1365,3 +1365,21 @@ button:focus-visible {
     gap: 6px;
   }
 }
+
+
+/* Certificate link */
+.cert-link {
+  color: var(--cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+.cert-link:hover {
+  color: var(--text);
+  gap: 10px;
+}
